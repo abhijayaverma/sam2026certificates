@@ -25,7 +25,9 @@ function getTextOptions(): CertificateTextOptions {
     maxWidthRatio: readNumberEnv('CERT_NAME_MAX_WIDTH_RATIO', 0.68),
     fontSizeRatio: readNumberEnv('CERT_NAME_FONT_SIZE_RATIO', 0.055),
     minFontSize: readNumberEnv('CERT_NAME_MIN_FONT_SIZE', 16),
-    fontSizePx: process.env.CERT_NAME_FONT_SIZE_PX ? readNumberEnv('CERT_NAME_FONT_SIZE_PX', 0) : undefined,
+    fontSizePx: process.env.CERT_NAME_FONT_SIZE_PX
+      ? readNumberEnv('CERT_NAME_FONT_SIZE_PX', 0)
+      : undefined,
     color: process.env.CERT_NAME_COLOR || '#1f2937',
   };
 }
